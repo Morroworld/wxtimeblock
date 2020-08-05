@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<van-calendar show="{{ calendarshow }}" position="left" bind:close="calendaronClose" bind:confirm="onConfirm" />
+
+<van-popup  show="{{ remarkShow }}"  closeable  position="bottom"  custom-style="height: 25%"  bind:close="remarkClose">
+  <view id="remark1">备注</view>
+  <view id="remark2" bindtap="inputshow">{{ value }}</view>
+  <view id="remark3" bindtap="delplan">删除计划</view>
+</van-popup>
+
+<van-popup show="{{ inputshow }}" closeable  position="top" custom-style="height: 100%" bind:close="inputclose">
+  <view id="input">
+    <van-cell-group><van-field value="{{value}}" bind:change="remarkChange" maxlength="22"/></van-cell-group>
+  </view>
+  <view id="saveinput" bindtap="modify">保存备注</view>
+</van-popup>
+
+<van-row>
+  <van-col span="3">
+    <view id="month" bindtap="calendarshowPopup">{{month}}月</view>
+    <view id="day" bindtap="calendarshowPopup">{{day}}</view>
+    <view id="week" bindtap="calendarshowPopup">{{days}}</view>
+  </van-col>
+  <van-col span="1" offset="1">
+    <view class="hourdisplay top">0</view>
+    <view class="hourdisplay">1</view>
+    <view class="hourdisplay">2</view>
+    <view class="hourdisplay">3</view>
+    <view class="hourdisplay">4</view>
+    <view class="hourdisplay">5</view>
+    <view class="hourdisplay">6</view>
+    <view class="hourdisplay">7</view>
+    <view class="hourdisplay">8</view>
+    <view class="hourdisplay">9</view>
+    <view class="hourdisplay">10</view>
+    <view class="hourdisplay">11</view>
+    <view class="hourdisplay">12</view>
+    <view class="hourdisplay">13</view>
+    <view class="hourdisplay">14</view>
+    <view class="hourdisplay">15</view>
+    <view class="hourdisplay">16</view>
+    <view class="hourdisplay">17</view>
+    <view class="hourdisplay">18</view>
+    <view class="hourdisplay">19</view>
+    <view class="hourdisplay">20</view>
+    <view class="hourdisplay">21</view>
+    <view class="hourdisplay">22</view>
+    <view class="hourdisplay">23</view>
+  </van-col>
+  <van-col span="6">
+    <view style="margin-top: 10px">
+      <view wx:for="{{ List_left }}" wx:key="key">
+        <view id="{{index}}" class="timeblock" style="background-color:{{ item[0] }};" bindtap="focus_left">{{ item[1] }}</view>
+      </view>
+    </view>
+    <view class="bottom"></view>
+  </van-col>
+  <van-col span="6">
+    <view style="margin-top: 10px">
+      <view wx:for="{{ List_right }}" wx:key="key">
+        <view id="{{index}}" class="timeblock" style="background-color:{{ item[0] }};" bindtap="focus_right">{{ item[1] }}</view>
+      </view>
+    </view>
+    <view class="bottom"></view>
+  </van-col>
+  <van-col span="6" offset="1">
+    <view id="plancontainer">
+        <view bindtap="" class="plan" id="working" bindtap="working">工作</view>
+        <view bindtap="" class="plan" id="learning" bindtap="learning">学习</view>
+        <view bindtap="" class="plan" id="shopping" bindtap="shopping">购物</view>
+        <view bindtap="" class="plan" id="housework" bindtap="housework">家务</view>
+        <view bindtap="" class="plan" id="TV" bindtap="TV">看电视</view>
+        <view bindtap="" class="plan" id="mobilephone" bindtap="mobilephone">玩手机</view>
+        <view bindtap="" class="plan" id="game" bindtap="game">玩游戏</view>
+        <view bindtap="" class="plan" id="sports" bindtap="sports">运动</view>
+        <view bindtap="" class="plan" id="party" bindtap="party">聚会</view>
+        <view bindtap="" class="plan" id="sleeping" bindtap="sleeping">睡觉</view>
+    </view>
+  </van-col>
+</van-row>

@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "时间块",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-field": "@vant/weapp/field/index"
+  }
+}

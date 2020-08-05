@@ -1,0 +1,136 @@
+/**index.wxss**/
+
+page {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#month{
+  font-size: 15px;
+}
+
+#day{
+  font-size: 24px;
+}
+
+#week{
+  font-size: 10px;
+}
+
+#month, #day, #week{
+  padding-left: 10px;
+}
+
+.top, #month{
+  margin-top: 10px;
+}
+
+.timeblock{
+  height: 34px;
+  border: #ffffff 2px solid;
+  border-radius: 5px;line-height: 34px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.hourdisplay{
+  width: auto;
+  height: 35px;
+  color: #8a8a8a;
+  font-size: 12px;
+  font-weight: 700;
+  padding-top: 3px;
+}
+
+#plancontainer{
+  margin-top: 10px;
+  margin-left: -6px;
+  position: fixed;
+}
+
+.plan{
+  width: 85px;
+  height: 34px;
+  border: white 2px solid;
+  border-radius: 8px;
+  line-height: 34px;
+  text-align: center;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+#working{
+  background-color: #FF3A30 ;
+}
+
+#learning{
+  background-color: #FD8244;
+}
+
+#shopping{
+  background-color: #FDB844;
+}
+
+#housework{
+  background-color: #E2CB00;
+}
+
+#TV{
+  background-color: #67d033;
+}
+
+#mobilephone{
+  background-color: #48F9A7;
+}
+
+#game{
+  background-color: #48F9EE;
+}
+
+#sports{
+  background-color: #487FF9;
+}
+
+#party{
+    background-color: #BB48F9;
+}
+
+#sleeping{
+  background-color: #666666;
+}
+
+.bottom{
+  height: 100px;
+}
+
+#remark1{
+  margin: 10px;
+}
+
+#remark2{
+  padding:0 10px;
+  width: 100%;
+}
+
+#remark3,#saveinput{
+  margin: 10px auto 0 auto;
+  height: 30px;
+  width: 150px;
+  border: white 2px solid;
+  border-radius: 8px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 16px;
+  background-color: teal;
+}
+
+#input{
+  margin:40px 10px 0 10px;
+  width: auto; 
+}
